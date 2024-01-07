@@ -1,0 +1,44 @@
+$bl:#4081EC;
+$yl:#FFBB33;
+$rd:#F73345;
+$gr:#E0E0E0;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .parent{
+        height: 70vh;
+        width: 80%;
+        background-color: #fff6ff;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 4%;
+        div{
+            font-size: 40px;
+            padding: 20px;
+        }
+        div:nth-child(1),:nth-child(5){
+            background-color: $bl;
+        }
+        div:nth-child(2),:nth-child(6){
+            background-color: $yl;
+        }
+        div:nth-child(3),:nth-child(7){
+            background-color: $rd;
+        }
+        div:nth-child(4),:nth-child(8){
+            background-color: $gr;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .parent{
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
